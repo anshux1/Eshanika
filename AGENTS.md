@@ -6,6 +6,9 @@
 - The only applications are `apps/admin` and `apps/store`.
 - Shared code belongs in `packages/`; shared package names use the `@eshanika/*`
   scope.
+- `packages/env` owns the shared T3 Env and Zod dependencies. Each app owns its
+  environment schema in `src/env.ts` and imports it from `next.config.ts` so
+  invalid values fail during the build.
 - Keep one root `pnpm-workspace.yaml` and one root `pnpm-lock.yaml`. Do not add
   nested workspaces or app-level lockfiles.
 

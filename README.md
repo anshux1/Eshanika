@@ -8,6 +8,7 @@ shared packages used by both.
 - `apps/store` — customer-facing storefront on port 3001
 - `apps/admin` — administration app on port 3000
 - `packages/ui` — shared React UI components published internally as `@eshanika/ui`
+- `packages/env` — shared T3 Env and Zod setup for typed environment validation
 - `packages/eslint-config` — shared ESLint 10 flat configurations
 - `packages/typescript-config` — shared TypeScript compiler presets
 
@@ -32,4 +33,4 @@ pnpm --filter admin dev
 pnpm --filter store dev
 ```
 
-Read [AGENT.md](./AGENT.md) before changing repository structure or tooling.
+Read [AGENTS.md](./AGENTS.md) before changing repository structure or tooling.
