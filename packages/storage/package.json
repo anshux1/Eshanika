@@ -1,0 +1,36 @@
+{
+  "name": "@eshanika/storage",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "browser": null,
+      "default": "./src/index.ts"
+    },
+    "./upload": {
+      "browser": null,
+      "default": "./src/upload.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@better-upload/server": "3.0.19",
+    "@aws-sdk/client-s3": "3.1131.0",
+    "@aws-sdk/s3-request-presigner": "3.1131.0",
+    "@eshanika/auth": "workspace:*",
+    "@eshanika/env": "workspace:*",
+    "server-only": "0.0.1"
+  },
+  "devDependencies": {
+    "@eshanika/eslint-config": "workspace:*",
+    "@eshanika/typescript-config": "workspace:*",
+    "@types/node": "26.4.1",
+    "eslint": "10.10.0",
+    "typescript": "7.0.2"
+  }
+}

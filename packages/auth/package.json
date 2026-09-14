@@ -1,0 +1,39 @@
+{
+  "name": "@eshanika/auth",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./client": "./src/client.ts",
+    "./server": {
+      "browser": null,
+      "default": "./src/server.ts"
+    },
+    "./next": {
+      "browser": null,
+      "default": "./src/next.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@better-auth/drizzle-adapter": "1.7.4",
+    "@eshanika/db": "workspace:*",
+    "@eshanika/env": "workspace:*",
+    "@eshanika/messaging": "workspace:*",
+    "@eshanika/validation": "workspace:*",
+    "better-auth": "1.7.4",
+    "server-only": "0.0.1"
+  },
+  "devDependencies": {
+    "@eshanika/eslint-config": "workspace:*",
+    "@eshanika/typescript-config": "workspace:*",
+    "@types/node": "26.4.1",
+    "eslint": "10.10.0",
+    "typescript": "7.0.2"
+  }
+}

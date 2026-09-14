@@ -1,25 +1,8 @@
 # `@eshanika/env`
 
-Shared environment-validation dependencies for the Eshanika Next.js apps.
+Shared T3 Env schemas for the two Next.js applications. Provider values are
+optional here until the matching service is provisioned.
 
-The package exposes T3 Env's `createEnv` function and the Zod namespace so each
-app can define its own server and client schema without duplicating dependency
-configuration:
-
-```ts
-import { createEnv, z } from "@eshanika/env";
-
-export const env = createEnv({
-  server: {
-    NODE_ENV: z
-      .enum(["development", "test", "production"])
-      .default("development"),
-  },
-  client: {},
-  experimental__runtimeEnv: process.env,
-});
-```
-
-Import the app's `src/env.ts` from `next.config.ts` so invalid values fail the
-build early. Add future server-only variables to `server`, and expose browser
-variables only through `client` with the `NEXT_PUBLIC_` prefix.
+Applications compose the schemas in `src/env.ts` and import that file from
+`next.config.ts`, so invalid values fail during the build. Only the variables
+exported from `@eshanika/env/client` may be used in browser code.

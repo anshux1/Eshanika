@@ -1,0 +1,40 @@
+{
+  "name": "@eshanika/db",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "browser": null,
+      "default": "./src/index.ts"
+    },
+    "./health": {
+      "browser": null,
+      "default": "./src/health.ts"
+    },
+    "./schema": {
+      "browser": null,
+      "default": "./src/schema/index.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@eshanika/types": "workspace:*",
+    "@eshanika/env": "workspace:*",
+    "@neondatabase/serverless": "1.1.0",
+    "drizzle-orm": "0.45.2",
+    "server-only": "0.0.1"
+  },
+  "devDependencies": {
+    "@eshanika/eslint-config": "workspace:*",
+    "@eshanika/typescript-config": "workspace:*",
+    "@types/node": "26.4.1",
+    "drizzle-kit": "0.31.10",
+    "eslint": "10.10.0",
+    "typescript": "7.0.2"
+  }
+}

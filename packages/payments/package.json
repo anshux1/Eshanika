@@ -1,0 +1,34 @@
+{
+  "name": "@eshanika/payments",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "browser": null,
+      "default": "./src/index.ts"
+    },
+    "./signatures": {
+      "browser": null,
+      "default": "./src/signatures.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@eshanika/env": "workspace:*",
+    "@eshanika/validation": "workspace:*",
+    "razorpay": "2.9.6",
+    "server-only": "0.0.1"
+  },
+  "devDependencies": {
+    "@eshanika/eslint-config": "workspace:*",
+    "@eshanika/typescript-config": "workspace:*",
+    "@types/node": "26.4.1",
+    "eslint": "10.10.0",
+    "typescript": "7.0.2"
+  }
+}

@@ -11,8 +11,14 @@
     "check-types": "next typegen && tsc --noEmit"
   },
   "dependencies": {
+    "@better-upload/client": "3.0.19",
+    "@better-upload/server": "3.0.19",
+    "@eshanika/api": "workspace:*",
+    "@eshanika/auth": "workspace:*",
     "@eshanika/env": "workspace:*",
+    "@eshanika/storage": "workspace:*",
     "@eshanika/ui": "workspace:*",
+    "@tanstack/react-query": "5.102.8",
     "next": "16.3.5",
     "react": "19.2.8",
     "react-dom": "19.2.8"

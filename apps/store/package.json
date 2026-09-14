@@ -11,8 +11,14 @@
     "check-types": "next typegen && tsc --noEmit"
   },
   "dependencies": {
+    "@eshanika/api": "workspace:*",
+    "@eshanika/auth": "workspace:*",
     "@eshanika/env": "workspace:*",
+    "@eshanika/payments": "workspace:*",
     "@eshanika/ui": "workspace:*",
+    "@eshanika/workflows": "workspace:*",
+    "@tanstack/react-query": "5.102.8",
+    "inngest": "4.20.0",
     "next": "16.3.5",
     "react": "19.2.8",
     "react-dom": "19.2.8"

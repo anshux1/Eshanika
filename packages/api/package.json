@@ -1,0 +1,41 @@
+{
+  "name": "@eshanika/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "browser": null,
+      "default": "./src/index.ts"
+    },
+    "./router": {
+      "browser": null,
+      "default": "./src/router.ts"
+    },
+    "./handler": {
+      "browser": null,
+      "default": "./src/handler.ts"
+    },
+    "./client": "./src/client.ts",
+    "./query": "./src/query.ts"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@eshanika/auth": "workspace:*",
+    "@orpc/client": "1.15.0",
+    "@orpc/server": "1.15.0",
+    "@orpc/tanstack-query": "1.15.0",
+    "server-only": "0.0.1"
+  },
+  "devDependencies": {
+    "@eshanika/eslint-config": "workspace:*",
+    "@eshanika/typescript-config": "workspace:*",
+    "@types/node": "26.4.1",
+    "eslint": "10.10.0",
+    "typescript": "7.0.2"
+  }
+}

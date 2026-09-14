@@ -1,11 +1,13 @@
-import { createEnv, z } from "@eshanika/env";
+import { createEnv } from "@eshanika/env";
+import { clientEnvSchema } from "@eshanika/env/client";
+import { serverEnvSchema } from "@eshanika/env/server";
 
 export const env = createEnv({
-  server: {
-    NODE_ENV: z
-      .enum(["development", "test", "production"])
-      .default("development"),
-  },
-  client: {},
-  experimental__runtimeEnv: process.env,
+  server: serverEnvSchema,
+  client: clientEnvSchema,
+  experimental__runtimeEnv: process.env as unknown as Record<
+    keyof typeof clientEnvSchema,
+    string | undefined
+  >,
+  emptyStringAsUndefined: true,
 });
